@@ -192,7 +192,7 @@ export function ServiceDetailPage() {
                   }}
                 >
                   <CheckoutForm
-                    amount={service.price}
+                    amount={Number(service.price)}
                     onSuccess={() => setPaymentStep('paid')}
                     onSkip={() => setPaymentStep('skipped')}
                   />

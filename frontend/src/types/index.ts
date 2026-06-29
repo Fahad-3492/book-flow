@@ -2,7 +2,7 @@ export interface Service {
   id: number;
   name: string;
   description: string | null;
-  price: number;
+  price: number | string;
   duration_minutes: number;
   is_active?: boolean;
   created_at?: string;
@@ -25,7 +25,7 @@ export interface Booking {
   payment_status: 'unpaid' | 'paid' | 'refunded';
   notes: string | null;
   service_name: string;
-  price: number;
+  price: number | string;
   duration_minutes: number;
   customer_name?: string;
   customer_email?: string;
