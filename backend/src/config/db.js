@@ -15,7 +15,7 @@ const pool = mysql.createPool({
   // Some hosts (e.g. PlanetScale) require TLS; Railway's own MySQL plugin
   // does not. Set DB_SSL=true in that environment's variables if needed —
   // left off by default so local development needs no extra config.
-  ...(process.env.DB_SSL === 'true' ? { ssl: { rejectUnauthorized: true } } : {}),
+  ...(process.env.DB_SSL === 'true' ? { ssl: { rejectUnauthorized: false } } : {}),
 });
 
 // Quick sanity check used at server startup so a bad DB config fails loudly
