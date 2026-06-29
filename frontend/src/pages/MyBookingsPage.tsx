@@ -83,6 +83,9 @@ export function MyBookingsPage() {
                   </p>
                   <p className="text-sm text-sage mt-1">
                     {formatDuration(booking.duration_minutes)} · {formatPrice(booking.price)}
+{booking.payment_status === 'paid' && (
+  <span className="text-sage"> · Paid</span>
+)}
                   </p>
                 </div>
                 <span
